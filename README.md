@@ -100,10 +100,3 @@ This project is created for **educational and internship purposes**.
 
 ---
 
-If you want, I can:
-
-* Add **screenshots section**
-* Shorten this for **2-minute interview explanation**
-* Customize it exactly to your company’s format
-
-Just tell me.
