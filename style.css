@@ -1,0 +1,455 @@
+/* ========================================
+   Reset and Global Styles
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ========================================
+   Container and Layout
+   ======================================== */
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Header Styles
+   ======================================== */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h1 {
+    font-size: 28px;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.form-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ========================================
+   Form Styles
+   ======================================== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+}
+
+/* ========================================
+   Label Styles
+   ======================================== */
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* ========================================
+   Input and Textarea Styles
+   ======================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 12px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover {
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* ========================================
+   Textarea Specific Styles
+   ======================================== */
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+}
+
+/* ========================================
+   Form Hint Text
+   ======================================== */
+
+.form-hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* ========================================
+   Validation Styles
+   ======================================== */
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.3), 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.reset-btn {
+    background-color: #ecf0f1;
+    color: #555;
+    border: 2px solid #bdc3c7;
+}
+
+.reset-btn:hover {
+    background-color: #d5dbdb;
+    border-color: #95a5a6;
+}
+
+.reset-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(189, 195, 199, 0.3);
+}
+
+/* ========================================
+   Form Footer
+   ======================================== */
+
+.form-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.form-footer p {
+    font-size: 12px;
+    color: #888;
+}
+
+/* ========================================
+   Responsive Design - Tablet
+   ======================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 25px;
+        border-radius: 10px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+    }
+
+    .form-description {
+        font-size: 13px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   Responsive Design - Mobile
+   ======================================== */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 25px;
+    }
+
+    .form-header h1 {
+        font-size: 22px;
+    }
+
+    .form-description {
+        font-size: 12px;
+    }
+
+    .contact-form {
+        gap: 18px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 11px 12px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .form-hint {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   Dark Mode Support (Optional)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    .container {
+        background-color: #0f3460;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .form-header h1 {
+        color: #e0aff0;
+    }
+
+    .form-description,
+    label,
+    .form-hint,
+    .form-footer p {
+        color: #ccc;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        background-color: #1a1a2e;
+        border-color: #333;
+        color: #fff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    input[type="tel"]::placeholder,
+    textarea::placeholder {
+        color: #777;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="tel"]:hover,
+    textarea:hover {
+        border-color: #667eea;
+        background-color: #16213e;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+        border-color: #667eea;
+        background-color: #16213e;
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    }
+
+    .reset-btn {
+        background-color: #1a1a2e;
+        color: #ccc;
+        border-color: #444;
+    }
+
+    .reset-btn:hover {
+        background-color: #16213e;
+        border-color: #667eea;
+    }
+
+    .form-footer {
+        border-top-color: #333;
+    }
+}
+
+/* ========================================
+   Accessibility Features
+   ======================================== */
+
+/* Focus visible for keyboard navigation */
+button:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    .required {
+        text-decoration: underline;
+    }
+
+    input:invalid:not(:placeholder-shown),
+    textarea:invalid:not(:placeholder-shown) {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
